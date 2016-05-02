@@ -1,0 +1,40 @@
+<style>
+.page-header{
+     margin-left:30px;
+     color:#ffffff;
+}
+.bdy{
+    background-image:url("http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2015/02/CoM_Stuk.io-Ruby-on-Rails.jpg");
+}
+.form-group{
+       font-size: 20px;
+       color:#ffffff;
+}
+.word{
+    text-align:center;
+     font-size: 25px;
+       color:#ffffff;
+}
+</style>
+<div class ="container">
+    <div class="page-header">
+      <h1><b>글자, 단어 숫자 세기!</b><small></small></h1>
+    </div>
+    <form method="POST" action="/count">
+        <div class="form-group">
+           <label for="comment">내용 입력</label>
+           <textarea class="form-control" rows="30" name="content" id="comment" placeholder="내용을 입력하세요"></textarea>
+        </div>
+        <button type="submit" class="btn btn-default">제출</button>
+    </form>
+    <h1 class="word">모든 글자 수(공백포함) : 
+    <%=@postsAll%>
+    </h1>
+    <h1 class="word">글자 수(공백 미포함) : 
+    <%=@wordAll%>
+    </h1>
+    <h1 class="word">단어 수 : 
+    <%=@word%>
+    </h1>
+    
+</div>
